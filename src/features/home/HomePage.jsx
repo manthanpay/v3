@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { asset } from "../utils/asset";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -97,7 +98,7 @@ export default function HomePage({ onAuth }) {
   ];
   const heroSlides = [
     {
-      image: "/banners-v5/hero-rural-bharat.jpg",
+      image: asset("/banners-v5/hero-rural-bharat.jpg"),
       eyebrow: t("heroSlides.slide1.eyebrow"),
       title: (
         <>
@@ -111,7 +112,7 @@ export default function HomePage({ onAuth }) {
     },
 
     {
-      image: "/banners-v5/hero-women-digital-seva.jpg",
+      image: asset("/banners-v5/hero-women-digital-seva.jpg"),
       eyebrow: t("heroSlides.slide2.eyebrow"),
       title: (
         <>
@@ -125,7 +126,7 @@ export default function HomePage({ onAuth }) {
     },
 
     {
-      image: "/banners-v5/hero-community-banking.jpg",
+      image: asset("/banners-v5/hero-community-banking.jpg"),
       eyebrow: t("heroSlides.slide3.eyebrow"),
       title: (
         <>
@@ -375,7 +376,7 @@ export default function HomePage({ onAuth }) {
         <div className="container tutorial-grid-v5">
           <div className="tutorial-video" onClick={() => setVideoOpen(true)}>
             <img
-              src="/media/aeps-tutorial-poster.jpg"
+              src={asset("/media/aeps-tutorial-poster.jpg")}
               alt="AEPS tutorial preview"
             />
             <div className="video-shade" />
@@ -442,7 +443,7 @@ export default function HomePage({ onAuth }) {
               <div className="map-orbit o1" />
               <div className="map-orbit o2" />
               <img
-                src="/images/india-states.png"
+                src={asset("/images/india-states.png")}
                 alt="Stylised India network map"
               />
               {[
@@ -781,8 +782,8 @@ export default function HomePage({ onAuth }) {
               ×
             </button>
             <video
-              src="/media/aeps (2).mp4"
-              poster="/media/aeps-tutorial-poster.jpg"
+              src={asset("/media/aeps (2).mp4")}
+              poster={asset("/media/aeps-tutorial-poster.jpg")}
               controls
               autoPlay
               playsInline
