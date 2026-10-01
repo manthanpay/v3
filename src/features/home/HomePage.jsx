@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { asset } from "../utils/asset";
+import { asset } from "../../utils/assets";
 import {
   ArrowRight,
   ArrowUpRight,
