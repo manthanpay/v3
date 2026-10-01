@@ -358,7 +358,7 @@ export default function HomePage({ onAuth }) {
           </div>
           <div className="manifesto-visual">
             <img
-              src="/banners-v5/campaign-banking.jpg"
+              src={asset("/banners-v5/campaign-banking.jpg")}
               alt="Indian retailer serving a customer"
             />
             <div className="floating-note">
@@ -528,7 +528,7 @@ export default function HomePage({ onAuth }) {
           <div className="campaign-grid-v5">
             <article>
               <img
-                src="/banners-v5/campaign-retailer-growth.jpg"
+                src={asset("/banners-v5/campaign-retailer-growth.jpg")}
                 alt="Retailer growth in an Indian village"
               />
               <div>
@@ -541,7 +541,7 @@ export default function HomePage({ onAuth }) {
             </article>
             <article>
               <img
-                src="/banners-v5/campaign-trust.jpg"
+                src={asset("/banners-v5/campaign-trust.jpg")}
                 alt="Trust and community"
               />
               <div>
@@ -560,7 +560,7 @@ export default function HomePage({ onAuth }) {
             </article>
             <article>
               <img
-                src="/banners-v5/campaign-digital-bharat.jpg"
+                src={asset("/banners-v5/campaign-digital-bharat.jpg")}
                 alt="Digital network across Bharat"
               />
               <div>
@@ -586,7 +586,7 @@ export default function HomePage({ onAuth }) {
           <div className="stories-stage">
             <div className="stories-image">
               <img
-                src={currentStory.src}
+                src={asset(currentStory.src)}
                 alt="Indian community and digital service story"
               />
             </div>
