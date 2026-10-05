@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Globe2, Menu, X } from "lucide-react";
+import {
+  ArrowRight,
+  Globe2,
+  Menu,
+  X,
+  ShieldCheck,
+} from "lucide-react";
 import HomePage from "./features/home/HomePage.jsx";
 import AuthModal from "./features/auth/AuthModal.jsx";
 import PartnerDashboard from "./features/dashboard/PartnerDashboard.jsx";
@@ -8,6 +14,10 @@ import { demoAuthService } from "./services/demoAuthService.js";
 
 import { LANGUAGES } from "./i18n/translations";
 import { useTranslation } from "./i18n/I18nContext";
+
+import LoginPage from "./features/auth/LoginPage.jsx";
+import OnboardingProfilePage from "./features/onboarding/OnboardingProfilePage.jsx";
+import OnboardingKycPage from "./features/onboarding/OnboardingKycPage.jsx";
 
 
 export default function App() {
@@ -52,6 +62,19 @@ export default function App() {
     };
   }, [user]);
 
+  const path = window.location.pathname;
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+  if (path === `${basePath}/login`) {
+    return <LoginPage onLogin={save} />;
+  }
+  if (path === `${basePath}/onboarding/profile`) {
+    return <OnboardingProfilePage />;
+  }
+  if (path === `${basePath}/onboarding/kyc`) {
+    return <OnboardingKycPage />;
+  }
+
   if (user)
     return (
       <PartnerDashboard
@@ -78,7 +101,7 @@ export default function App() {
       <header className="site-header-v5">
         <div className="container nav-v5">
           <a href="#top" className="brand-link-v5">
-            <Brand height={46} />
+            <Brand height={65} />
           </a>
           <nav className={menu ? "open" : ""}>
             <a href="#services" onClick={() => setMenu(false)}>
@@ -113,7 +136,12 @@ export default function App() {
                 ))}
               </select>
             </div>
-            <button className="nav-login-v5" onClick={() => setModal("login")}>
+            <button
+              className="nav-login-v5"
+              onClick={() => {
+                window.location.href = `${import.meta.env.BASE_URL}login`;
+              }}
+            >
               Partner Login
             </button>
             <button
@@ -137,7 +165,7 @@ export default function App() {
         <div className="container">
           <div className="footer-main-v5">
             <div className="footer-brand">
-              <Brand height={45} />
+              <Brand height={65} />
               <p>
                 Digital financial services for the people who keep local India
                 moving.

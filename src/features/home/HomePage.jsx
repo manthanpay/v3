@@ -447,18 +447,18 @@ export default function HomePage({ onAuth }) {
                 alt="Stylised India network map"
               />
               {[
-                ["Delhi", 52, 24],
-                ["Punjab", 45, 18],
-                ["Rajasthan", 38, 34],
-                ["UP", 59, 33],
-                ["Bihar", 70, 37],
-                ["Gujarat", 35, 54],
-                ["MP", 51, 48],
-                ["Maharashtra", 48, 64],
-                ["Odisha", 73, 60],
-                ["Telangana", 60, 72],
-                ["Karnataka", 48, 81],
-                ["Tamil Nadu", 57, 91],
+                ["Delhi", 40, 24],
+                ["Punjab", 41, 18],
+                ["Rajasthan", 32, 34],
+                ["UP", 50, 35],
+                ["Bihar", 66, 40],
+                ["Gujarat", 20, 48],
+                ["MP", 45, 48],
+                ["Maharashtra", 30, 61],
+                ["Odisha", 65, 55],
+                ["Telangana", 44, 65],
+                ["Karnataka", 35, 75],
+                ["Tamil Nadu", 42, 88],
               ].map(([name, x, y]) => (
                 <span
                   className="map-node-v5"
@@ -478,7 +478,7 @@ export default function HomePage({ onAuth }) {
                 <span>
                   <Building2 size={15} /> {t("network.view")}
                 </span>
-                <small>{t("network.manualUpdate")}</small>
+                {/* <small>{t("network.manualUpdate")}</small> */}
               </div>
               <div className="region-tabs">
                 {regions.map((r) => (
@@ -628,7 +628,7 @@ export default function HomePage({ onAuth }) {
                 {t("howItWorks.title")} <em>{t("howItWorks.titleAccent")}</em>
               </h2>
             </div>
-            <p>{t("howItWorks.description")}</p>
+            {/* <p>{t("howItWorks.description")}</p> */}
           </div>
           <div className="how-grid-v5">
             <div>
@@ -700,7 +700,7 @@ export default function HomePage({ onAuth }) {
             <h2>
               {t("faq.title")} <em>{t("faq.titleAccent")}</em>
             </h2>
-            <p>{t("faq.description")}</p>
+            {/* <p>{t("faq.description")}</p> */}
             <button className="text-link" onClick={() => onAuth("signup")}>
               {t("faq.button")} <ArrowRight size={16} />
             </button>
